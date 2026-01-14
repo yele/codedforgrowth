@@ -1,2 +1,4 @@
 # codedforgrowth
-Coded for Growth Website
+Coded for Growth
+
+Coaching program for Women in Tech
