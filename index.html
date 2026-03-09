@@ -198,10 +198,10 @@
 
         /* Hero Section */
         .hero {
-            min-height: 100vh;
+            min-height: auto;
             display: flex;
             align-items: center;
-            padding: 8rem 2rem 4rem;
+            padding: 8rem 2rem 3rem;
             position: relative;
             overflow: hidden;
         }
@@ -330,57 +330,6 @@
             background: var(--lavender-pale);
         }
 
-        .hero-image {
-            position: relative;
-            animation: fadeInUp 1s ease 0.3s both;
-        }
-
-        .hero-image-wrapper {
-            position: relative;
-            border-radius: 30px;
-            overflow: hidden;
-            box-shadow: 0 25px 50px rgba(155, 138, 166, 0.2);
-        }
-
-        .hero-image-wrapper::before {
-            content: '';
-            position: absolute;
-            top: -20px;
-            left: -20px;
-            right: 20px;
-            bottom: 20px;
-            border: 2px solid var(--lavender-light);
-            border-radius: 30px;
-            z-index: -1;
-        }
-
-        .hero-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .hero-image-placeholder {
-            width: 100%;
-            aspect-ratio: 4/5;
-            background: linear-gradient(135deg, var(--lavender-light) 0%, var(--lavender-pale) 100%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: var(--lavender-deep);
-            font-size: 1rem;
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .hero-image-placeholder svg {
-            width: 80px;
-            height: 80px;
-            margin-bottom: 1rem;
-            opacity: 0.5;
-        }
-
         /* Floating elements */
         .floating-shape {
             position: absolute;
@@ -414,7 +363,7 @@
 
         /* Section Styling */
         section {
-            padding: 6rem 2rem;
+            padding: 4rem 2rem;
         }
 
         .section-container {
@@ -449,7 +398,7 @@
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1.2fr;
-            gap: 4rem;
+            gap: 3rem;
             align-items: center;
         }
 
@@ -463,17 +412,10 @@
             box-shadow: 0 20px 40px rgba(155, 138, 166, 0.15);
         }
 
-        .about-image-placeholder {
+        .about-image-wrapper img {
             width: 100%;
-            aspect-ratio: 1;
-            background: linear-gradient(135deg, var(--lavender-pale) 0%, var(--lavender-light) 100%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: var(--lavender-deep);
-            padding: 2rem;
-            text-align: center;
+            height: auto;
+            display: block;
         }
 
         .about-text h2 {
@@ -661,23 +603,10 @@
             padding: 0.75rem 0;
             border-bottom: 1px solid var(--lavender-pale);
             color: var(--text-medium);
-            display: flex;
-            gap: 0.75rem;
-            align-items: flex-start;
         }
 
         .week-list li:last-child {
             border-bottom: none;
-        }
-
-        .week-number {
-            background: var(--lavender-pale);
-            color: var(--lavender-deep);
-            padding: 0.2rem 0.6rem;
-            border-radius: 6px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            white-space: nowrap;
         }
 
         .includes-list {
@@ -912,9 +841,9 @@
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#program">Program</a></li>
-            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdpjkdl1-JnJLfS7g6hxtLCg8mQ79vMOljNBeCPrGKmcTuPUg/viewform?usp=header" target="_blank">Apply</a></li>
+            <li><a href="#apply">Apply</a></li>
         </ul>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdpjkdl1-JnJLfS7g6hxtLCg8mQ79vMOljNBeCPrGKmcTuPUg/viewform?usp=header" target="_blank" class="nav-cta">Apply Now</a>
+        <a href="#apply" class="nav-cta">Apply Now</a>
         <button class="mobile-menu-btn" aria-label="Menu">
             <span></span>
             <span></span>
@@ -926,8 +855,8 @@
     <div class="mobile-nav" id="mobileNav">
         <a href="#about" class="mobile-nav-link">About</a>
         <a href="#program" class="mobile-nav-link">Program</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdpjkdl1-JnJLfS7g6hxtLCg8mQ79vMOljNBeCPrGKmcTuPUg/viewform?usp=header" target="_blank" class="mobile-nav-link">Apply</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdpjkdl1-JnJLfS7g6hxtLCg8mQ79vMOljNBeCPrGKmcTuPUg/viewform?usp=header" target="_blank" class="nav-cta mobile-nav-link">Apply Now</a>
+        <a href="#apply" class="mobile-nav-link">Apply</a>
+        <a href="#apply" class="nav-cta mobile-nav-link">Apply Now</a>
     </div>
 
     <!-- Hero Section -->
@@ -936,12 +865,12 @@
         <div class="floating-shape shape-2"></div>
         <div class="hero-container">
             <div class="hero-content">
-                <span class="hero-tagline">Career Coaching for Women in Tech</span>
+                <span class="hero-tagline">Career Coaching for Women in Engineering, Product & Design</span>
                 <h1>Find your voice. Own your path. <em>Grow boldly.</em></h1>
-                <p class="hero-description">Navigate the challenges of tech with confidence. A 6-week group coaching program designed for women who are ready to advocate for themselves, communicate assertively, and advance their careers â€” without shrinking.</p>
+                <p class="hero-description">Navigate the challenges and uncertainties of the tech industry in this AI era with confidence. A 6-week group coaching program for mid-to-senior women in tech who are ready to advocate for themselves, communicate assertively, and advance their careers — without shrinking.</p>
                 <div class="hero-buttons">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdpjkdl1-JnJLfS7g6hxtLCg8mQ79vMOljNBeCPrGKmcTuPUg/viewform?usp=header" target="_blank" class="btn-primary">
-                        Apply for the Free Pilot
+                    <a href="#apply" class="btn-primary">
+                        Apply Now
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
                     <a href="#program" class="btn-secondary">Learn More</a>
@@ -956,20 +885,21 @@
             <div class="about-content">
                 <div class="about-image">
                     <div class="about-image-wrapper">
-                        <img src="yele-headshot.jpg" alt="Yele - Career Coach" style="width: 100%; height: auto; object-fit: cover;">
+                        <img src="yele-headshot.jpg" alt="Yele - Career Coach">
                     </div>
                 </div>
                 <div class="about-text">
                     <h2>Hi, I'm <em>Yele</em></h2>
-                    <p>I'm a senior Engineering Leader with 18+ years in software development, a Master's in Applied Computing from the University of Toronto, and a deep passion for helping people grow.</p>
-                    <p>I've led high-performing engineering organizations, coached and mentored countless professionals, and built inclusive teams where diverse perspectives are amplified and every person feels seen, valued, and supported.</p>
-                    <p>As a Women in Tech advocate, I've created mentorship programs at companies like Instacart and led group coaching initiatives that have helped women navigate the unique challenges of our industry.</p>
-                    <p>I believe great technology is built by empowered people â€” and I'm here to help you become one of them.</p>
+                    <p>Let's be honest: being a woman in tech has never been easy. But right now? It's a whole different level of hard.</p>
+                    <p>AI is reshaping everything — roles are shifting, layoffs are constant, and the pressure to "stay relevant" feels relentless. If you're feeling anxious, overlooked, or uncertain about your future, you're not alone. I hear it every day from brilliant women who are questioning their place in this industry.</p>
+                    <p>I've spent nearly 20 years in the trenches of tech — building teams, shipping products, hiring and promoting talent. I've seen how the system works, and I've seen how often it fails women. That's exactly why I built this program.</p>
+                    <p>At Instacart, I launched a Women's Coaching Program that had over 200 women sign up, resulting in 53 coaching groups. I've done this before — and I know it works.</p>
+                    <p>You don't need to shrink. You don't need to wait to be picked. You need the right mindset, the right tools, the right support, and a space where you can finally be heard. That's what Coded for Growth is here to give you.</p>
                     <div class="about-credentials">
-                        <span class="credential">18+ Years in Tech</span>
+                        <span class="credential">20 Years in Tech</span>
                         <span class="credential">Engineering Leader</span>
-                        <span class="credential">AI Advocate</span>
-                        <span class="credential">U of T Master's</span>
+                        <span class="credential">Women in Tech Advocate</span>
+                        <span class="credential">Career Growth Coach</span>
                     </div>
                 </div>
             </div>
@@ -986,6 +916,13 @@
             <div class="problem-grid">
                 <div class="problem-card">
                     <div class="problem-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                    </div>
+                    <h3>Worried about AI & change</h3>
+                    <p>Everyone's talking about AI, but no one's telling you how to actually navigate it. Your skills feel uncertain, the pressure to upskill is relentless, and the flood of tools is overwhelming. You don't know where to start — or if starting even matters.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
                     </div>
                     <h3>Struggling to be heard</h3>
@@ -993,17 +930,10 @@
                 </div>
                 <div class="problem-card">
                     <div class="problem-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
-                    </div>
-                    <h3>Worried about AI & change</h3>
-                    <p>The rapid shift to AI feels overwhelming. You wonder if your skills will stay relevant and how to navigate this transition.</p>
-                </div>
-                <div class="problem-card">
-                    <div class="problem-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/><line x1="16" y1="8" x2="2" y2="22"/><line x1="17.5" y1="15" x2="9" y2="15"/></svg>
                     </div>
                     <h3>Underselling yourself</h3>
-                    <p>You know you deserve more â€” a promotion, a raise, better projects â€” but asking for it feels uncomfortable or impossible.</p>
+                    <p>You know you deserve more — a promotion, a raise, better projects — but asking for it feels uncomfortable or impossible.</p>
                 </div>
                 <div class="problem-card">
                     <div class="problem-icon">
@@ -1017,7 +947,7 @@
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                     </div>
                     <h3>Burning out on balance</h3>
-                    <p>Between work demands and life responsibilities â€” especially with kids â€” you're running on empty with no clear path forward.</p>
+                    <p>Between work demands and life responsibilities — especially with kids — you're running on empty with no clear path forward.</p>
                 </div>
                 <div class="problem-card">
                     <div class="problem-icon">
@@ -1035,52 +965,34 @@
         <div class="section-container">
             <div class="program-highlight">
                 <div class="program-highlight-content">
-                    <span class="pilot-badge">ðŸš€ Free Pilot Program</span>
-                    <h2>6 Weeks to Transform Your Career</h2>
-                    <p>Join an intimate group of 3-4 women in tech for a transformative coaching experience. Build your confidence, find your voice, and create a bold path forward â€” together.</p>
+                    <span class="pilot-badge">🚀 Free Pilot Program — Launched on International Women's Day 2026</span>
+                    <h2>6 Weeks to Shift Your Perspective and Move Forward</h2>
+                    <p>Join 4 women in tech who are facing the same hurdles as you. In 6 weeks, you'll reset your mindset, build real confidence, find your voice, and create a bold, intentional path forward — together.</p>
                 </div>
             </div>
 
             <div class="program-details">
                 <div class="program-card">
-                    <h3><span>ðŸ“…</span> Weekly Themes</h3>
+                    <h3><span>📅</span> What We'll Explore</h3>
                     <ul class="week-list">
-                        <li>
-                            <span class="week-number">Week 1</span>
-                            Defining your career vision and what "success" means to you now
-                        </li>
-                        <li>
-                            <span class="week-number">Week 2</span>
-                            Owning your voice â€” assertive communication without apology
-                        </li>
-                        <li>
-                            <span class="week-number">Week 3</span>
-                            Self-advocacy and making your work visible
-                        </li>
-                        <li>
-                            <span class="week-number">Week 4</span>
-                            Negotiating what you deserve â€” raises, promotions, flexibility
-                        </li>
-                        <li>
-                            <span class="week-number">Week 5</span>
-                            Navigating uncertainty â€” AI, industry shifts, staying relevant
-                        </li>
-                        <li>
-                            <span class="week-number">Week 6</span>
-                            Designing sustainable success â€” boundaries, energy, the long game
-                        </li>
+                        <li>Defining your career vision and what "success" means to you now</li>
+                        <li>Owning your voice — assertive communication without apology</li>
+                        <li>Self-advocacy and making your work visible</li>
+                        <li>Negotiating what you deserve — raises, promotions, flexibility</li>
+                        <li>Navigating uncertainty — AI, industry shifts, staying relevant, how to upskill</li>
+                        <li>Designing sustainable success — boundaries, energy, the long game</li>
                     </ul>
                 </div>
                 <div class="program-card">
-                    <h3><span>âœ¨</span> What's Included</h3>
+                    <h3><span>✨</span> What's Included</h3>
                     <ul class="includes-list">
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            6 weekly group coaching sessions (60-90 min each)
+                            6 weekly virtual sessions (60-90 min) — including an intro session to connect and a final 1:1 with me
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            Intimate cohort of 3-4 women in tech
+                            Intimate cohort of 4 women in tech
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -1092,7 +1004,7 @@
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            Personalized feedback and guidance from Yele
+                            Personalized feedback and guidance from me
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -1104,17 +1016,60 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section id="faq" style="background: var(--lavender-pale);">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Questions? I've got answers.</h2>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="background: white; padding: 1.5rem 2rem; border-radius: 15px; margin-bottom: 1rem; box-shadow: 0 5px 15px rgba(155, 138, 166, 0.1);">
+                    <h3 style="font-size: 1.2rem; color: var(--text-dark); margin-bottom: 0.5rem; font-family: 'Cormorant Garamond', serif;">Who is this program for?</h3>
+                    <p style="color: var(--text-medium); margin: 0;">Mid-to-senior women in Engineering, Product, and Design — whether you're an individual contributor or a people manager.</p>
+                </div>
+                <div style="background: white; padding: 1.5rem 2rem; border-radius: 15px; margin-bottom: 1rem; box-shadow: 0 5px 15px rgba(155, 138, 166, 0.1);">
+                    <h3 style="font-size: 1.2rem; color: var(--text-dark); margin-bottom: 0.5rem; font-family: 'Cormorant Garamond', serif;">How long does the program run?</h3>
+                    <p style="color: var(--text-medium); margin: 0;">6 weeks, with one virtual session per week.</p>
+                </div>
+                <div style="background: white; padding: 1.5rem 2rem; border-radius: 15px; margin-bottom: 1rem; box-shadow: 0 5px 15px rgba(155, 138, 166, 0.1);">
+                    <h3 style="font-size: 1.2rem; color: var(--text-dark); margin-bottom: 0.5rem; font-family: 'Cormorant Garamond', serif;">When does the program start?</h3>
+                    <p style="color: var(--text-medium); margin: 0;">The program will start in March, exact start date is TBD — dates will be decided based on group availability.</p>
+                </div>
+                <div style="background: white; padding: 1.5rem 2rem; border-radius: 15px; margin-bottom: 1rem; box-shadow: 0 5px 15px rgba(155, 138, 166, 0.1);">
+                    <h3 style="font-size: 1.2rem; color: var(--text-dark); margin-bottom: 0.5rem; font-family: 'Cormorant Garamond', serif;">What time are the sessions?</h3>
+                    <p style="color: var(--text-medium); margin: 0;">Evening sessions on weekdays. The exact time will be determined based on the group's availability.</p>
+                </div>
+                <div style="background: white; padding: 1.5rem 2rem; border-radius: 15px; margin-bottom: 1rem; box-shadow: 0 5px 15px rgba(155, 138, 166, 0.1);">
+                    <h3 style="font-size: 1.2rem; color: var(--text-dark); margin-bottom: 0.5rem; font-family: 'Cormorant Garamond', serif;">Why is this pilot free?</h3>
+                    <p style="color: var(--text-medium); margin: 0;">This is the first cohort of Coded for Growth. I'm offering it free in exchange for your honest feedback to help shape the future of this program.</p>
+                </div>
+                <div style="background: white; padding: 1.5rem 2rem; border-radius: 15px; margin-bottom: 1rem; box-shadow: 0 5px 15px rgba(155, 138, 166, 0.1);">
+                    <h3 style="font-size: 1.2rem; color: var(--text-dark); margin-bottom: 0.5rem; font-family: 'Cormorant Garamond', serif;">How are participants selected?</h3>
+                    <p style="color: var(--text-medium); margin: 0;">I'll review applications based on your responses and select participants who will benefit most and contribute to a strong group dynamic.</p>
+                </div>
+                <div style="background: white; padding: 1.5rem 2rem; border-radius: 15px; margin-bottom: 1rem; box-shadow: 0 5px 15px rgba(155, 138, 166, 0.1);">
+                    <h3 style="font-size: 1.2rem; color: var(--text-dark); margin-bottom: 0.5rem; font-family: 'Cormorant Garamond', serif;">What's the deadline to apply?</h3>
+                    <p style="color: var(--text-medium); margin: 0;">Applications close end of day Wednesday, March 11th.</p>
+                </div>
+                <div style="background: white; padding: 1.5rem 2rem; border-radius: 15px; margin-bottom: 1rem; box-shadow: 0 5px 15px rgba(155, 138, 166, 0.1);">
+                    <h3 style="font-size: 1.2rem; color: var(--text-dark); margin-bottom: 0.5rem; font-family: 'Cormorant Garamond', serif;">When will I hear back?</h3>
+                    <p style="color: var(--text-medium); margin: 0;">I'll personally review every application and reach out within one week of your submission.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Apply Section -->
     <section id="apply">
         <div class="section-container">
             <div class="cta-box">
                 <h2>Ready to stop shrinking?</h2>
-                <p>Apply for the free pilot program and take the first step toward owning your voice, advocating for yourself, and building a career on your terms.</p>
+                <p>Apply for the pilot program and take the first step toward owning your voice, advocating for yourself, and building a career on your terms.</p>
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdpjkdl1-JnJLfS7g6hxtLCg8mQ79vMOljNBeCPrGKmcTuPUg/viewform?usp=header" target="_blank" class="btn-primary">
                     Apply Now
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
                 </a>
-                <span class="spots-left">Only 3-4 spots available</span>
+                <span class="spots-left">🗓️ Applications close end of day Wednesday, March 11th — Only 4 spots available</span>
             </div>
         </div>
     </section>
@@ -1129,11 +1084,14 @@
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdpjkdl1-JnJLfS7g6hxtLCg8mQ79vMOljNBeCPrGKmcTuPUg/viewform?usp=header" target="_blank">Apply</a>
         </div>
         <div class="footer-social">
+            <a href="mailto:yele.codedforgrowth@gmail.com" aria-label="Email">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </a>
             <a href="https://www.linkedin.com/in/yele-bonilla/" target="_blank" aria-label="LinkedIn">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             </a>
         </div>
-        <p class="footer-copyright">Â© 2026 Coded for Growth. All rights reserved.</p>
+        <p class="footer-copyright">© 2026 Coded for Growth. All rights reserved.</p>
     </footer>
 
     <script>
